@@ -1,0 +1,291 @@
+{
+  "semantics": [
+    {
+      "label": "Medijska vsebina",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Neobvezna nastavitev dodatne medijske vsebine za prikaz nad nalogo."
+        },
+        {
+          "label": "Onemogoči povečavo slike"
+        }
+      ]
+    },
+    {
+      "label": "Prazno polje",
+      "fields": [
+        {
+          "label": "Navodilo udeležencem",
+          "default": "Vnesi manjkajoče besede.",
+          "description": "Opis reševanja naloge."
+        },
+        {
+          "label": "Besedilo s praznimi polji",
+          "important": {
+            "description": "<ul><li>Prazno polje se označi kot __________ (najmanj trije podčrtaji).</li><li>Besedilo naj ne vsebuje odgovora.</li></ul>"
+          },
+          "description": ""
+        },
+        {
+          "label": "Prazna polja v besedilu",
+          "entity": "prazno polje",
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "field": {
+            "label": "Prazno polje",
+            "fields": [
+              {
+                "label": "Pravilen odgovor",
+                "description": "Nadomestni odgovor se loči s poševnico (/)."
+              },
+              {
+                "label": "Namig"
+              },
+              {
+                "label": "Nepravilen odgovor",
+                "entity": "nepravilen odgovor",
+                "field": {
+                  "label": "Nepravilen odgovor",
+                  "description": "Nadomestni odgovor se loči s poševnico (/).",
+                  "fields": [
+                    {
+                      "label": "Besedilo nepravilnega odgovora"
+                    },
+                    {
+                      "label": "Povratna informacija",
+                      "description": "Povratna informacija naj udeležencu pomaga pri iskanju pravilnega odgovora. V idealnem primeru je prilagojena vnosu posameznika."
+                    },
+                    {
+                      "label": "V povratni informaciji prikaži poudarke",
+                      "description": "Poudarek se označi z dvema klicajema (!!) pred in za besedo/besedno zvezo (npr. Zadnja beseda je !!poudarjena!!)."
+                    },
+                    {
+                      "label": "Položaj poudarka glede na prazno polje:",
+                      "options": [
+                        {
+                          "label": "- 1 (pred poljem)"
+                        },
+                        {
+                          "label": "- 2 (dva poudarka pred poljem)"
+                        },
+                        {
+                          "label": "- 3 (tri poudarke pred poljem)"
+                        },
+                        {
+                          "label": "+ 1 (za poljem)"
+                        },
+                        {
+                          "label": "+ 2 (dva poudarka za poljem)"
+                        },
+                        {
+                          "label": "+ 3 (tri poudarke za poljem)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Izrezki",
+      "fields": [
+        {
+          "label": "Seznam izrezkov",
+          "description": "Izrezki so besedila, ki jih je mogoče znova uporabiti v povratnih informacijah. V besedilo se vstavijo z navedbo @snippetname.",
+          "entity": "izrezek",
+          "field": {
+            "label": "Izrezek",
+            "fields": [
+              {
+                "label": "Ime",
+                "description": "Ime izrezka lahko vsebuje le črke in številke."
+              },
+              {
+                "label": "Besedilo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Splošna povratna informacija",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Privzeto"
+            }
+          ],
+          "label": "Določi ločeno povratno informacijo za vsak razpon rezultatov",
+          "description": "Kliknite gumb \"Dodaj razpon\" za dodajanje dodatnih razponov. Primer: 0-20 % Slab rezultat, 21-91 % Povprečen rezultat, 91-100 % Odličen rezultat!",
+          "entity": "razpon",
+          "field": {
+            "fields": [
+              {
+                "label": "Razpon rezultatov"
+              },
+              {},
+              {
+                "label": "Povratna informacija za definiran razpon rezultatov",
+                "placeholder": "Vnesite povratno informacijo"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Nastavitve interakcije",
+      "description": "Nastavitve omogočajo nadzor nad interakcijo aktivnosti za udeležence.",
+      "fields": [
+        {
+          "label": "Način odgovora",
+          "description": "Nastavitev določa način vnosa odgovora.",
+          "options": [
+            {
+              "label": "Izbira med možnostmi"
+            },
+            {
+              "label": "Zapis odgovora"
+            }
+          ]
+        },
+        {
+          "label": "Ponujene alternative za izbiro",
+          "options": [
+            {
+              "label": "Nepravilni odgovori iz praznih polj"
+            },
+            {
+              "label": "Pravilni odgovori vseh drugih praznih polj"
+            }
+          ]
+        },
+        {
+          "label": "Največje število alternativnih odgovorov iz drugih polj",
+          "description": "Število 0 pomeni brez omejitev."
+        },
+        {
+          "label": "Odziv na črkovalno napako",
+          "options": [
+            {
+              "label": "Upoštevaj kot pravilen odgovor"
+            },
+            {
+              "label": "Opozori udeleženca o napaki"
+            },
+            {
+              "label": "Upoštevaj kot drugo napako oz. nepravilen odgovor"
+            }
+          ]
+        },
+        {
+          "label": "Loči velike/male črke",
+          "description": "Razlikuje med zapisom v velikih ali malih tiskanih črkah."
+        },
+        {
+          "label": "Sprotno preverjaj vnesene odgovore"
+        },
+        {
+          "label": "Omogoči gumb \"Prikaži rešitev\""
+        },
+        {
+          "label": "Pred ogledom rešitve je potrebno podati vse odgovore"
+        },
+        {
+          "label": "Omogoči gumb \"Poskusi ponovno\""
+        },
+        {
+          "label": "Omogoči gumb \"Preveri\""
+        },
+        {
+          "label": "Pred zaključkom aktivnosti zahtevaj potrditev",
+          "description": "Nastavitev se izključuje z možnostjo \"Sprotno preverjaj vnesene odgovore\""
+        },
+        {
+          "label": "Pred ponovitvijo aktivnosti zahtevaj potrditev"
+        }
+      ]
+    },
+    {
+      "label": "Besedilo za gumb \"Prikaži rešitev\"",
+      "default": "Prikaži rešitev"
+    },
+    {
+      "label": "Besedilo za gumb \"Poskusi ponovno\"",
+      "default": "Poskusi ponovno"
+    },
+    {
+      "label": "Besedilo za gumb \"Preveri\"",
+      "default": "Preveri"
+    },
+    {
+      "label": "Besedilo za manjkajoč odgovor",
+      "default": "Pred ogledom rešitve je potrebno izpolniti vsa prazna polja"
+    },
+    {
+      "label": "Besedilo za ikono namiga",
+      "default": "Namig"
+    },
+    {
+      "label": "Besedilo opozorila ob črkovalni napaki",
+      "description": "Sporočilo se udeležencem prikaže ob zaznani črkovalni napaki. @mistake je spremenljivka.",
+      "default": "Preveri črkovanje: @mistake"
+    },
+    {
+      "label": "Pogovorno okno pred oddajo odgovora",
+      "fields": [
+        {
+          "label": "Naslov",
+          "default": "Zaključi?"
+        },
+        {
+          "label": "Besedilo telesa pogovornega okna",
+          "default": "Res želiš zaključiti?"
+        },
+        {
+          "label": "Besedilo gumba za preklic",
+          "default": "Prekliči"
+        },
+        {
+          "label": "Besedilo gumba za potrditev",
+          "default": "Potrdi"
+        }
+      ]
+    },
+    {
+      "label": "Pogovorno okno pred ponovitvijo aktivnosti",
+      "fields": [
+        {
+          "label": "Naslov",
+          "default": "Poskusi ponovno?"
+        },
+        {
+          "label": "Besedilo telesa pogovornega okna",
+          "default": "Res želiš poskusiti ponovno?"
+        },
+        {
+          "label": "Besedilo gumba za preklic",
+          "default": "Prekliči"
+        },
+        {
+          "label": "Besedilo gumba za potrditev",
+          "default": "Potrdi"
+        }
+      ]
+    },
+    {
+      "label": "Besedilo, ki ga bralnik zaslona uporabi za izražanje napredka",
+      "default": "Dosežene točke: :num od :total"
+    }
+  ]
+}
